@@ -21,3 +21,4 @@ services:
       - "8080:8080"
     volumes:
       - ./h2-keycloak:/opt/keycloak/data/h2
+      - ./themes:/opt/keycloak/themes
