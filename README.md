@@ -1,7 +1,7 @@
 # POC ANGULAR KEYCLOAK
 The goal of this POC is to configure security layer to establish secure oauth2 connection between angular front end application and spring boot resource server 
 
-## Necessary tools to build and launch POC SPRING LDAP project
+## Necessary tools to build and launch poc angular keycloak project
 
 - [JDK 21.0.2](https://jdk.java.net/21/)
 - [Maven 3](https://maven.apache.org)
@@ -18,7 +18,7 @@ The goal of this POC is to configure security layer to establish secure oauth2 c
 - Create a snapshot of keycloak server content with the following command: ``docker cp keycloak:/opt/keycloak/data/h2 ./h2-keycloak-sv``
 - Delete the containers using the following command line executed from the ``./docker`` folder: ``docker-compose down``
 
-## A series of command lines to use to launch POC SPRING LDAP application
+## A series of command lines to use to launch poc angular keycloak application
 ### Package and launch back-end application
 Execute the following command lines in project folder:
 - ``mvn clean package``
