@@ -1,0 +1,23 @@
+services:
+  pocdb:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: postgresql-pocdb
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: pocdb
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: pocdb
+  keycloak:
+    image: quay.io/keycloak/keycloak:25.0.5
+    container_name: keycloak
+    command: start-dev
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./h2-keycloak:/opt/keycloak/data/h2
